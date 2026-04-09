@@ -14,7 +14,7 @@
 ---
 
 ## 📂 仓库结构
-
+```
 foundry_demo/
 ├── src/                    # Ethernaut 关卡合约（已部署到本地 Foundry 测试网）
 ├── test/                   # 关卡测试文件（每个关卡独立）
@@ -28,7 +28,7 @@ foundry_demo/
 ├── .github/workflows/      # CI（自动化测试）
 ├── foundry.toml           # Foundry 配置
 └── NOTES.md               # 个人解题笔记（可选）
-
+```
 ---
 ## 🚀 快速开始
 ### 1. 环境准备
