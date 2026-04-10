@@ -7,10 +7,9 @@ interface Itoken {
 
 contract ToeknScript is Script {
     function run() external {
-        uint256 privateKey = vm.envUint("PRIVATE_KEY");
         
-        Itoken token = Itoken(0x9012C7AB2aF865309a6DfDa9e2C2317eDD62b5D9);
-        vm.startBroadcast(privateKey);
+        Itoken token = Itoken(0x2b644191378196224C9e2c1c3FD3aA1877C386A2);
+        vm.startBroadcast();
         token.transfer(address(0), 21);
         
         vm.stopBroadcast();
