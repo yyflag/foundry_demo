@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "forge-std/Script.sol";
-import "../src/TelephoneAttack.sol";
+import "../src/TelephoneExploit.sol";
 
 contract TelephoneScript is Script {
     function run() external {
