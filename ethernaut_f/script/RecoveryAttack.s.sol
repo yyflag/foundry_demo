@@ -11,7 +11,7 @@ contract RecoveryAttackScript is Script {
     function run() external {
         // SimpleToken 地址：从 Etherscan 的 Internal Txns 找到
         // （也可以用 keccak256(rlp([recoveryLevel, 1])) 链下算出来）
-        address lostToken = 0xAf9050402E3bEE84cA771Dd74E0a4C9645798fD5;
+        address lostToken = 0xAf9050402e3bEe84CA771dd74e0A4c9645798fD5;
 
         console.log("SimpleToken balance(wei):", lostToken.balance);
 
