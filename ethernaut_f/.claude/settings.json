@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cast call *)",
+      "Bash(cast code *)",
+      "Bash(cast sig *)",
+      "Bash(cast selectors *)",
+      "Bash(cast 4byte 0xd38def5b)",
+      "Bash(cast 4byte 0x7726f776)",
+      "WebSearch",
+      "Bash(xargs grep -l \"Motorbike\\\\|Engine\")",
+      "WebFetch(domain:ethernaut.openzeppelin.com)",
+      "mcp__github__get_file_contents"
+    ]
+  }
+}

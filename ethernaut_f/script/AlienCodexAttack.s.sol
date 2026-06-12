@@ -12,7 +12,7 @@ interface IAlienCodex {
 
 contract AlienCodexAttackScript is Script {
     function run() external {
-        address alienCodexLevel = 0xc18A69197AD51923fBE66BE95fb4d9Bb98D4FAef;
+        address alienCodexLevel = 0x0BC04aa6aaC163A6B3667636D798FA053D43BD11;
 
         vm.startBroadcast();
 
